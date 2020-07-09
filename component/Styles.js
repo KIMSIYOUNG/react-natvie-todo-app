@@ -26,12 +26,14 @@ export const STYLE = StyleSheet.create({
   },
   inputContainer: {
     flex :1,
+    marginBottom:-15
   },
   todoContainer: {
     marginTop: StatusBar.currentHeight || 0,
     flex: 7,
   },
   processText: {
+    marginTop:10,
     flex: 1,
     fontSize: 20,
     textAlign: "center",
@@ -53,7 +55,7 @@ export const BACKGROUND_COLOR = {
 }
 
 export const TODO_CONTAINER = {
-  item: {
+  itemStyle: {
     alignItems:'center',
     flexDirection:'row',
     backgroundColor: '#F2F2F2',
@@ -64,6 +66,6 @@ export const TODO_CONTAINER = {
   },
   content: {
     marginLeft:15,
-    fontSize: 17,
+    fontSize: 12,
   },
 }

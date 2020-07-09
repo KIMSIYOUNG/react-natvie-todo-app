@@ -1,15 +1,22 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { STYLE } from './Styles';
+import { DONE, EVERY, WILL } from './Const';
 
-const Status = () => {
+const Status = ({ filter }) => {
   const { processText, processStatus } = STYLE;
 
   return (
     <View style={processStatus}>
-      <Text style={processText}>Every</Text>
-      <Text style={processText}>Will do</Text>
-      <Text style={processText}>Done</Text>
+      <TouchableOpacity style={processText} onPress={() => filter(EVERY)} title='EVERY'>
+        <Text style={processText}>EVERY</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={processText} onPress={() => filter(WILL)} title='WILL'>
+        <Text style={processText}>WILL</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={processText} onPress={() => filter(DONE)} title='DONE'>
+        <Text style={processText}>DONE</Text>
+      </TouchableOpacity>
     </View>
   )
 }
