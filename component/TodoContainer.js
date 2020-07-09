@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, SafeAreaView, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
+import { FlatList, SafeAreaView, Switch, Text, TextInput, View } from 'react-native';
 import { STYLE, TODO_CONTAINER } from './Styles';
 
 const TodoContainer = ({ toggleSwitch, todo, updateItem }) => {
@@ -26,7 +26,7 @@ const TodoContainer = ({ toggleSwitch, todo, updateItem }) => {
 
   return (
     <View style={todoContainer}>
-      <Text style={count}>count : {createCount()}</Text>
+      <Text style={count}> count : {createCount()}</Text>
       <SafeAreaView>
         <FlatList
           data={todo}

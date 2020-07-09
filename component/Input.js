@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { STYLE } from './Styles';
-import { View, TextInput, Button } from 'react-native';
+import { TextInput, View } from 'react-native';
 
 const Input = ({ register, inputChange, input }) => {
   const { inputContainer, inputText } = STYLE;

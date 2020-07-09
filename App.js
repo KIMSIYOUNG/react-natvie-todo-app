@@ -6,19 +6,17 @@ import Status from './component/Status';
 import Input from './component/Input';
 import TodoContainer from './component/TodoContainer';
 import { DONE, EVERY, WILL } from './component/Const';
-import { View } from 'react-native';
-
-export const Separator = () => <View style={styles.separator} />;
 
 const App = () => {
   const { middle, start, end } = BACKGROUND_COLOR;
 
   const [input, setInput] = useState("Input what you are doing")
   const [update, setUpdate] = useState("");
-  const [nextId, setNextId] = useState(3);
+  const [nextId, setNextId] = useState(4);
   const [todo, setTodo] = useState([
     { id: 1, text: "Hi I'm greet to meet you !", isDone: WILL },
-    { id: 2, text: "Let's get Started to make your to do!", isDone: WILL }
+    { id: 2, text: "Let's get Started to make your to do!", isDone: WILL },
+    { id: 3, text: "Swipe what you did like this one haha :) ", isDone: DONE},
   ])
   const [filtered, setFiltered] = useState(todo);
 
@@ -68,6 +66,10 @@ const App = () => {
     setNextId(nextId + 1);
     setInput("Input what you are doing");
     setTodo(todo.concat(newTodo));
+
+    if(filtered[0].isDone!==DONE) {
+      setFiltered(filtered.concat(newTodo));
+    }
   }
 
   const filterTodoStatus = (status) => {
