@@ -8,6 +8,7 @@ const Status = ({ filter }) => {
 
   return (
     <View style={processStatus}>
+
       <TouchableOpacity style={processText} onPress={() => filter(EVERY)} title='EVERY'>
         <Text style={processText}>EVERY</Text>
       </TouchableOpacity>
@@ -17,6 +18,7 @@ const Status = ({ filter }) => {
       <TouchableOpacity style={processText} onPress={() => filter(DONE)} title='DONE'>
         <Text style={processText}>DONE</Text>
       </TouchableOpacity>
+
     </View>
   )
 }

@@ -3,20 +3,12 @@ import { STYLE } from './Styles';
 import { View, TextInput, Button } from 'react-native';
 
 const Input = ({ register, inputChange, input }) => {
-  const { inputContainer } = STYLE;
+  const { inputContainer, inputText } = STYLE;
 
   return (
     <View style={inputContainer}>
       <TextInput
-        style={{
-          height: 40,
-          borderColor: '#F2F2F2',
-          borderWidth: 1,
-          borderRadius: 100,
-          marginHorizontal: 45,
-          textAlign: "center",
-          color: "#F2F2F2"
-        }}
+        style={inputText}
         onChangeText={inputChange}
         value={input}
         onSubmitEditing={() => register(input)}

@@ -6,7 +6,9 @@ import Status from './component/Status';
 import Input from './component/Input';
 import TodoContainer from './component/TodoContainer';
 import { DONE, EVERY, WILL } from './component/Const';
+import { View } from 'react-native';
 
+export const Separator = () => <View style={styles.separator} />;
 
 const App = () => {
   const { middle, start, end } = BACKGROUND_COLOR;
@@ -20,6 +22,10 @@ const App = () => {
   ])
   const [filtered, setFiltered] = useState(todo);
 
+  const inputChange = (data) => {
+    setInput(data);
+  }
+
   const changeFilteredTodo = (item) => {
     setFiltered(item)
   }
@@ -32,12 +38,10 @@ const App = () => {
         text: update,
         isDone: isDone,
       } : item);
-    console.log(changedTodo.map(item => console.log(item)));
     setTodo(changedTodo);
   }
 
-  const toggleSwitch = (id, value) => {
-    alert(value);
+  const toggleSwitch = (id) => {
     changeTodoStatus(id)
   }
 
@@ -64,10 +68,6 @@ const App = () => {
     setNextId(nextId + 1);
     setInput("Input what you are doing");
     setTodo(todo.concat(newTodo));
-  }
-
-  const inputChange = (data) => {
-    setInput(data);
   }
 
   const filterTodoStatus = (status) => {
