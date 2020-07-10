@@ -7,7 +7,6 @@ import Input from './Input';
 import TodoContainer from './TodoContainer';
 import { LinearGradient } from 'expo-linear-gradient';
 
-
 const TodoApp = () => {
   const { middle, start, end } = BACKGROUND_COLOR;
 
