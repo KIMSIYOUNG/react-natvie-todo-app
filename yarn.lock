@@ -1623,11 +1623,6 @@ axios@^0.19.2:
   dependencies:
     follow-redirects "1.5.10"
 
-axois@^0.0.1-security:
-  version "0.0.1-security"
-  resolved "https://registry.yarnpkg.com/axois/-/axois-0.0.1-security.tgz#372b4659c6a059ec4a6c6786f81fbf6cb5f892d2"
-  integrity sha512-8Nui4fwwyxHfjAfpDlg3Jt66EJA4i1D1eJch3D+wM/Oe+qhpyp7yfiszko/O5/adYu20wc37RG9/Eg8QIJHcvA==
-
 babel-plugin-dynamic-import-node@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.3.tgz#84fda19c976ec5c6defef57f9427b3def66e17a3"
@@ -4913,6 +4908,11 @@ readable-stream@^2.0.1, readable-stream@^2.2.2, readable-stream@~2.3.6:
     safe-buffer "~5.1.1"
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
+
+recoil@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/recoil/-/recoil-0.0.10.tgz#679ab22306f559f8a63c46fd5ff5241539f9248f"
+  integrity sha512-+9gRqehw3yKETmoZbhSnWu4GO10HDb5xYf1CjLF1oXGK2uT6GX5Lu9mfTXwjxV/jXxEKx8MIRUUbgPxvbJ8SEw==
 
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"

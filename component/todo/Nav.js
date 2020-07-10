@@ -1,7 +1,7 @@
 import React from 'react';
 import { STYLE } from './Styles';
-import { StatusBar, Text, View } from 'react-native';
-import AppStatusBar from '../AppStatusBar';
+import { Text, View } from 'react-native';
+import AppStatusBar from '../global/AppStatusBar';
 
 const Nav = () => {
   const { nav, navText } = STYLE;

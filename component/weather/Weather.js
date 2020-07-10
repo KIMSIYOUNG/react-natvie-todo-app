@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, View, StyleSheet, StatusBar } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import * as ProtoTypes from 'prop-types';
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import AppStatusBar from '../AppStatusBar';
+import AppStatusBar from '../global/AppStatusBar';
 
 const weatherOptions = {
   Haze: {
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     alignItems: "flex-start",
     justifyContent: "center",
-    flex:1
+    flex: 1
   },
   temp: {
     fontSize: 42,
