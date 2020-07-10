@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, StatusBar } from 'react-native';
 import * as ProtoTypes from 'prop-types';
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import AppStatusBar from '../AppStatusBar';
 
 const weatherOptions = {
   Haze: {
@@ -72,7 +73,7 @@ const Weather = ({ temp, condition }) => {
       colors={weatherOptions[condition].gradient}
       style={styles.container}
     >
-      <StatusBar barStyle="light-content"/>
+      <AppStatusBar/>
       <View style={styles.halfContainer}>
         <MaterialCommunityIcons
           size={96}

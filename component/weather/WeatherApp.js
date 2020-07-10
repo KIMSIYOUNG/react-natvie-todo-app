@@ -6,7 +6,7 @@ import Weather from './Weather';
 
 const API_KEY = "3147da487cd903f92848f0c5f86f1eee";
 
-const App = () => {
+const WeatherApp = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [temp, setTemp] = useState(null);
   const [condition, setCondition] = useState(null);
@@ -20,17 +20,19 @@ const App = () => {
     } = await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}&units=metric`
     );
-    setIsLoading(false);
     setTemp(temp);
     setCondition(weather[0].main);
+    setIsLoading(false);
   }
 
   const requestLocation = async () => {
     try {
+      const location = await Location.requestPermissionsAsync();
+      console.log(location)
       const {
         coords: { latitude, longitude }
       } = await Location.getCurrentPositionAsync();
-      getWeather(latitude, longitude);
+      await getWeather(latitude, longitude);
     }
     catch (error) {
       console.log("No Permission", "so sad");
@@ -46,4 +48,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default WeatherApp;
